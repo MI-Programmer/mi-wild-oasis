@@ -47,7 +47,7 @@ export const logout = async () => {
 export const updateCurrentUser = async ({ password, fullName, avatar }) => {
   // 1. Update password OR fullname
   let updateData;
-  if (password) updateData = { password };
+  // if (password) updateData = { password };
   if (fullName) updateData = { data: { fullName } };
 
   const { data, error } = await supabase.auth.updateUser(updateData);
